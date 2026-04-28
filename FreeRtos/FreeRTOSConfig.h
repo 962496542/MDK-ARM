@@ -81,6 +81,9 @@ NVIC value of 255. */
 //宏定义替代
 #define xPortPendSVHandler    PendSV_Handler
 #define vPortSVCHandler        SVC_Handler
+//不能替代systick_handler，因为要和HAL库兼容
+//需要打开能够查询FreeRTOS的任务状态，需要用到SysTick中断
+#define INCLUDE_xTaskGetSchedulerState 1                 
 
 
 

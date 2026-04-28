@@ -28,6 +28,8 @@
 "fly\timers.o"
 "fly\heap_4.o"
 "fly\port.o"
+"fly\app_freertos_task.o"
+"fly\int_ip5305t.o"
 --library_type=microlib --strict --scatter "Fly\Fly.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

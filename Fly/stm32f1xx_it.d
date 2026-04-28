@@ -27,3 +27,12 @@ fly\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 fly\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 fly\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 fly\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/FreeRTOS.h
+fly\stm32f1xx_it.o: ./FreeRtos/FreeRTOSConfig.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/projdefs.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/portable.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/deprecated_definitions.h
+fly\stm32f1xx_it.o: ./FreeRtos/portable/portmacro.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/mpu_wrappers.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/task.h
+fly\stm32f1xx_it.o: ./FreeRtos/include/list.h

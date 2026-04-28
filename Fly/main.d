@@ -28,6 +28,17 @@ fly\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 fly\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 fly\main.o: ../Core/Inc/usart.h
 fly\main.o: ../Core/Inc/gpio.h
+fly\main.o: ./Application/App_FreeRtos_Task.h
+fly\main.o: ./FreeRtos/include/FreeRTOS.h
+fly\main.o: ./FreeRtos/FreeRTOSConfig.h
+fly\main.o: ./FreeRtos/include/projdefs.h
+fly\main.o: ./FreeRtos/include/portable.h
+fly\main.o: ./FreeRtos/include/deprecated_definitions.h
+fly\main.o: ./FreeRtos/portable/portmacro.h
+fly\main.o: ./FreeRtos/include/mpu_wrappers.h
+fly\main.o: ./FreeRtos/include/task.h
+fly\main.o: ./FreeRtos/include/list.h
 fly\main.o: ./Common/Com_debug.h
 fly\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 fly\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+fly\main.o: ./InterFace/Int_IP5305T.h
