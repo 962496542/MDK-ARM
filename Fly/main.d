@@ -28,3 +28,6 @@ fly\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 fly\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 fly\main.o: ../Core/Inc/usart.h
 fly\main.o: ../Core/Inc/gpio.h
+fly\main.o: .\Common\Com_debug.h
+fly\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+fly\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

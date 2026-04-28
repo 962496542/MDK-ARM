@@ -18,6 +18,7 @@
 "fly\stm32f1xx_hal_flash_ex.o"
 "fly\stm32f1xx_hal_exti.o"
 "fly\system_stm32f1xx.o"
+"fly\com_debug.o"
 --library_type=microlib --strict --scatter "Fly\Fly.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
