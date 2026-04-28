@@ -1,0 +1,14 @@
+fly\stream_buffer.o: FreeRtos\stream_buffer.c
+fly\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+fly\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+fly\stream_buffer.o: ./FreeRtos/include/FreeRTOS.h
+fly\stream_buffer.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+fly\stream_buffer.o: ./FreeRtos/FreeRTOSConfig.h
+fly\stream_buffer.o: ./FreeRtos/include/projdefs.h
+fly\stream_buffer.o: ./FreeRtos/include/portable.h
+fly\stream_buffer.o: ./FreeRtos/include/deprecated_definitions.h
+fly\stream_buffer.o: ./FreeRtos/portable/portmacro.h
+fly\stream_buffer.o: ./FreeRtos/include/mpu_wrappers.h
+fly\stream_buffer.o: ./FreeRtos/include/task.h
+fly\stream_buffer.o: ./FreeRtos/include/list.h
+fly\stream_buffer.o: ./FreeRtos/include/stream_buffer.h

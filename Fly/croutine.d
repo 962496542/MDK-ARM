@@ -1,0 +1,13 @@
+fly\croutine.o: FreeRtos\croutine.c
+fly\croutine.o: ./FreeRtos/include/FreeRTOS.h
+fly\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+fly\croutine.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+fly\croutine.o: ./FreeRtos/FreeRTOSConfig.h
+fly\croutine.o: ./FreeRtos/include/projdefs.h
+fly\croutine.o: ./FreeRtos/include/portable.h
+fly\croutine.o: ./FreeRtos/include/deprecated_definitions.h
+fly\croutine.o: ./FreeRtos/portable/portmacro.h
+fly\croutine.o: ./FreeRtos/include/mpu_wrappers.h
+fly\croutine.o: ./FreeRtos/include/task.h
+fly\croutine.o: ./FreeRtos/include/list.h
+fly\croutine.o: ./FreeRtos/include/croutine.h

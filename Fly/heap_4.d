@@ -1,0 +1,14 @@
+fly\heap_4.o: FreeRtos\portable\heap_4.c
+fly\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+fly\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+fly\heap_4.o: ./FreeRtos/include/FreeRTOS.h
+fly\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+fly\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+fly\heap_4.o: ./FreeRtos/FreeRTOSConfig.h
+fly\heap_4.o: ./FreeRtos/include/projdefs.h
+fly\heap_4.o: ./FreeRtos/include/portable.h
+fly\heap_4.o: ./FreeRtos/include/deprecated_definitions.h
+fly\heap_4.o: ./FreeRtos/portable/portmacro.h
+fly\heap_4.o: ./FreeRtos/include/mpu_wrappers.h
+fly\heap_4.o: ./FreeRtos/include/task.h
+fly\heap_4.o: ./FreeRtos/include/list.h

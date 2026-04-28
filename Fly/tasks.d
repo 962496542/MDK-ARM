@@ -1,0 +1,16 @@
+fly\tasks.o: FreeRtos\tasks.c
+fly\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+fly\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+fly\tasks.o: ./FreeRtos/include/FreeRTOS.h
+fly\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+fly\tasks.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+fly\tasks.o: ./FreeRtos/FreeRTOSConfig.h
+fly\tasks.o: ./FreeRtos/include/projdefs.h
+fly\tasks.o: ./FreeRtos/include/portable.h
+fly\tasks.o: ./FreeRtos/include/deprecated_definitions.h
+fly\tasks.o: ./FreeRtos/portable/portmacro.h
+fly\tasks.o: ./FreeRtos/include/mpu_wrappers.h
+fly\tasks.o: ./FreeRtos/include/task.h
+fly\tasks.o: ./FreeRtos/include/list.h
+fly\tasks.o: ./FreeRtos/include/timers.h
+fly\tasks.o: ./FreeRtos/include/stack_macros.h
