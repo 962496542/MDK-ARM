@@ -17,14 +17,14 @@ typedef struct
  *
  * @param speed 速度值
  */
-void motor_init_set_speed(Motor_Struct *motor);
+void motor_set_speed(Motor_Struct *motor);
 
 /**
  * @brief 启动电机，传入结构体
  * 
  * @param
  */
-void motor_init_start(Motor_Struct *motor);
+void motor_start(Motor_Struct *motor);
 
 
 

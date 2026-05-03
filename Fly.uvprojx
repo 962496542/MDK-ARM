@@ -770,6 +770,11 @@
               <FileType>5</FileType>
               <FilePath>.\Common\Com_debug.h</FilePath>
             </File>
+            <File>
+              <FileName>Com_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Common\Com_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -969,6 +974,16 @@
               <FileName>Int_Motor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\InterFace\Int_Motor.h</FilePath>
+            </File>
+            <File>
+              <FileName>Int_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\InterFace\Int_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Int_led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\InterFace\Int_led.h</FilePath>
             </File>
           </Files>
         </Group>

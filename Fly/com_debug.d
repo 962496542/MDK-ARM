@@ -27,6 +27,8 @@ fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 fly\com_debug.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 fly\com_debug.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 fly\com_debug.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
