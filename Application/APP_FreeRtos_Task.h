@@ -9,6 +9,9 @@
 #include "Int_Motor.h"
 #include "Int_led.h"
 #include "Com_config.h"
+#include "Int_SI24R1.h"
+
+
 
 //初始化FreeRTOS任务
 void App_FreeRTOS_Init(void);

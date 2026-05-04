@@ -4,10 +4,10 @@
 //内存管理 -> C语言结构体存在 堆 中，不会自动垃圾回收，需要手动释放 -> 可使用同一结构体，循环使用
 
 //电机结构体
-Motor_Struct left_top_motor={.tim=&htim3,.channel=TIM_CHANNEL_1,.speed=200};
-Motor_Struct left_bottom_motor={.tim=&htim4,.channel=TIM_CHANNEL_4,.speed=200};
-Motor_Struct right_top_motor={.tim=&htim2,.channel=TIM_CHANNEL_2,.speed=200};
-Motor_Struct right_bottom_motor={.tim=&htim1,.channel=TIM_CHANNEL_3,.speed=200};
+Motor_Struct left_top_motor={.tim=&htim3,.channel=TIM_CHANNEL_1,.speed=100};
+Motor_Struct left_bottom_motor={.tim=&htim4,.channel=TIM_CHANNEL_4,.speed=100};
+Motor_Struct right_top_motor={.tim=&htim2,.channel=TIM_CHANNEL_2,.speed=100};
+Motor_Struct right_bottom_motor={.tim=&htim1,.channel=TIM_CHANNEL_3,.speed=100};
 
 
 //LED结构体
@@ -21,7 +21,7 @@ LED_Struct left_bottom_led={.port=LED4_GPIO_Port,.pin=LED4_Pin};
 Remote_State remote_state=REMOTE_CONNECTED;
 
 //飞行状态
-Flight_State flight_state=NORMAL;
+Flight_State flight_state=IDLE;
 
 /**电源管理任务
  * 
@@ -56,6 +56,14 @@ TaskHandle_t led_task_handle;
 //任务周期
 #define LED_TASK_PERIOD 100
 
+//SI24R1 通讯任务
+void si24r1_task(void *args);
+#define SI24R1_TASK_STACKSIZE 128
+#define SI24R1_TASK_PRIORITY 2
+TaskHandle_t si24r1_task_handle;
+//任务周期
+#define SI24R1_TASK_PERIOD 6
+
 
 
 void App_FreeRTOS_Init(void)
@@ -66,9 +74,12 @@ void App_FreeRTOS_Init(void)
     xTaskCreate(flight_task, "flight_task", FLIGHT_TASK_STACKSIZE, NULL, FLIGHT_TASK_PRIORITY, &flight_task_handle);
     //创建LED控制任务
     xTaskCreate(led_task, "led_task", LED_TASK_STACKSIZE, NULL, LED_TASK_PRIORITY, &led_task_handle);
-
+    //创建SI24R1通讯任务
+    xTaskCreate(si24r1_task, "si24r1_task", SI24R1_TASK_STACKSIZE, NULL, SI24R1_TASK_PRIORITY, &si24r1_task_handle);
+    
     //启动调度器
     vTaskStartScheduler();
+
 }
 
 
@@ -92,7 +103,17 @@ void flight_task(void *args)
     TickType_t xLastWakeTime = xTaskGetTickCount();
     while(1)
     {
-       // motor_init_start(&left_top_motor);
+        
+        // motor_start(&left_top_motor);
+        // motor_start(&left_bottom_motor);
+        // motor_start(&right_top_motor);
+        // motor_start(&right_bottom_motor);
+
+        //motor_set_speed(&left_top_motor);
+        //motor_set_speed(&left_bottom_motor);
+        //motor_set_speed(&right_top_motor);
+        //motor_set_speed(&right_bottom_motor);
+
 
         vTaskDelayUntil(&xLastWakeTime, FLIGHT_TASK_PERIOD);
 
@@ -167,3 +188,20 @@ void led_task(void *args)
 }
 
 
+uint8_t si24r1_rx_data[TX_PLOAD_WIDTH]={0};
+void si24r1_task(void *args)
+{
+    //获取当前基准时间
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    while(1)
+    {
+        //接收数据到缓冲区
+        uint8_t res = Int_SI24R1_RxPacket(si24r1_rx_data);
+        if(res==0)
+        {
+            debug_printf("接收数据成功:%s\r\n", si24r1_rx_data);
+        }
+        //6ms接受一次
+        vTaskDelayUntil(&xLastWakeTime, SI24R1_TASK_PERIOD);
+    }
+}
