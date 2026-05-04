@@ -51,3 +51,4 @@ fly\main.o: ./InterFace/Int_Motor.h
 fly\main.o: ./InterFace/Int_led.h
 fly\main.o: ./Common/Com_config.h
 fly\main.o: ./InterFace/Int_SI24R1.h
+fly\main.o: ./Application/APP_Receive_Data.h

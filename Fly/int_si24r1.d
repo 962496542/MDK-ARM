@@ -35,3 +35,12 @@ fly\int_si24r1.o: ./Common/Com_debug.h
 fly\int_si24r1.o: ../Core/Inc/usart.h
 fly\int_si24r1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 fly\int_si24r1.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+fly\int_si24r1.o: ./FreeRtos/include/FreeRtos.h
+fly\int_si24r1.o: ./FreeRtos/FreeRTOSConfig.h
+fly\int_si24r1.o: ./FreeRtos/include/projdefs.h
+fly\int_si24r1.o: ./FreeRtos/include/portable.h
+fly\int_si24r1.o: ./FreeRtos/include/deprecated_definitions.h
+fly\int_si24r1.o: ./FreeRtos/portable/portmacro.h
+fly\int_si24r1.o: ./FreeRtos/include/mpu_wrappers.h
+fly\int_si24r1.o: ./FreeRtos/include/task.h
+fly\int_si24r1.o: ./FreeRtos/include/list.h

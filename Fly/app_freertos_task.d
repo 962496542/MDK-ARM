@@ -50,3 +50,4 @@ fly\app_freertos_task.o: ./InterFace/Int_led.h
 fly\app_freertos_task.o: ./Common/Com_config.h
 fly\app_freertos_task.o: ./InterFace/Int_SI24R1.h
 fly\app_freertos_task.o: ../Core/Inc/spi.h
+fly\app_freertos_task.o: Application\APP_Receive_Data.h

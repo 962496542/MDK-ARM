@@ -1,7 +1,7 @@
 #include "Int_SI24R1.h"
 
 // 定义一个静态的发送地址  => 发送地址与接收地址相同
-uint8_t  TX_ADDRESS[TX_ADR_WIDTH] = {0x0A, 0x01, 0x06, 0x1E, 0x01};  // 定义一个静态发送地址
+uint8_t TX_ADDRESS[TX_ADR_WIDTH] = {0x0A, 0x01, 0x06, 0x1E, 0x01}; // 定义一个静态发送地址
 
 // SPI读写一个字节 => 写入的字节是传入的参数  读取的字节是返回值
 static uint8_t SPI_RW(uint8_t byte)
@@ -171,6 +171,7 @@ uint8_t Int_SI24R1_TxPacket(uint8_t *txbuf)
 	while (((state & TX_DS) == 0) && ((state & MAX_RT) == 0))
 	{
 		state = Int_SI24R1_Read_Reg(STATUS);
+		vTaskDelay(1);
 	}
 
 	Int_SI24R1_Write_Reg(SI24R1_WRITE_REG + STATUS, state); // 清除TX_DS或MAX_RT中断标志

@@ -34,6 +34,7 @@
 "fly\heap_4.o"
 "fly\port.o"
 "fly\app_freertos_task.o"
+"fly\app_receive_data.o"
 "fly\int_ip5305t.o"
 "fly\int_motor.o"
 "fly\int_led.o"
