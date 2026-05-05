@@ -11,6 +11,7 @@
 
 // 最大重试次数
 #define MAX_RETRY_TIMES 10
+static uint8_t App_process_unlock(void);
 
 /**
  * @brief 接收遥控器发送的遥控数据 => 解析为结构体
@@ -26,5 +27,12 @@ uint8_t App_receive_data(void);
  * @param res 上一次接收数据的返回值
  */
 void App_process_connect_state(uint8_t res);
+
+/**
+ * @brief 处理飞行状态
+ * 
+ * 
+ */
+void App_process_flight_state(void);
 
 #endif // __APP_RECEIVE_DATA__

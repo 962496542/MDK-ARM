@@ -19,6 +19,17 @@ typedef enum
     FAIL,//故障
 }Flight_State;
 
+//解锁状态
+typedef enum
+{
+    FREE=0,
+    MAX,
+    MIN,
+    LEAVE_MAX,
+    UNLOCK,
+}Thr_State;
+
+//遥控器数据结构定义
 typedef struct
 {
     int16_t thr;
@@ -28,6 +39,7 @@ typedef struct
     uint8_t shutdown;    //1:关机 0:不关机
     uint8_t fix_height;  //1:切换是否定高模式 0:不切换
 }Remote_Data;
+
 
 
 #endif 

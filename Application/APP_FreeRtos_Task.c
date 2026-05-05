@@ -19,7 +19,7 @@ LED_Struct left_bottom_led = {.port = LED4_GPIO_Port, .pin = LED4_Pin};
 Remote_State remote_state = REMOTE_DISCONNECTED;
 
 // 表示当前的飞行状态
-Flight_State flight_state = NORMAL;
+Flight_State flight_state = IDLE;
 
 // 扩展获取接收的遥控数据
 Remote_Data remote_data = {0};
@@ -78,7 +78,8 @@ void App_FreeRTOS_Init(void)
     vTaskStartScheduler();
 }
 
-void power_task(void *args)
+void power_task(void *args)// 每10s执行一次  =>  启动电源  避免自动关机
+
 {
     // 获取当前的基准时间
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -215,6 +216,8 @@ void com_task(void *args)
             // 使用freeRTOS直接任务通知 => 通知电源任务 => 执行关机
             xTaskNotifyGive(power_task_handle);
         }
+        // 4. 处理飞行状态
+        App_process_flight_state();
 
         // 6ms执行一次 接收数据的时间间隔应该等于发送数据的时间间隔
         vTaskDelayUntil(&xLastWakeTime, COM_TASK_PERIOD);
